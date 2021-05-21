@@ -31,7 +31,7 @@ void Venta(vector <Auto> Storage)
         }
         else
         {
-            if(Storage[index].get_status() == 1)
+            if(Storage[index].get_status() == 0)
             {
                 cout << "Vehiculo disponible, realizando pedido . . ." << endl;
                 cont_ventas++;
@@ -78,9 +78,9 @@ void Compra(vector <Auto> Storage)
         }
         else
         {
-            if(Storage[index].get_status() == 0)
+            if(Storage[index].get_status() == 1)
             {
-                cout << "Vehiculo disponible, generando compra . . ." << endl;
+                cout << "Vehiculo validado, generando compra . . ." << endl;
                 cont_ventas++;
             }
             else 

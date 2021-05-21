@@ -37,7 +37,7 @@ class Auto
         bool get_status();
         int get_puertas();
         int get_ano();
-        double get_kilometraje();
+        double get_kilomtraje();
 };
 Auto::~Auto(){}
 Auto::Auto(){}

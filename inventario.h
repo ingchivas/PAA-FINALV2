@@ -34,6 +34,24 @@ bool escribirStock(string marca, string modelo, string color, string status, str
     return true;
 }
 
+void anadirStock(vector <Auto> Storage, string marca, string modelo, string color, string status, string puertas, string ano, string kilometraje)
+{
+    double kmtraje = stod(kilometraje);
+    int npuertas = stoi(puertas);
+    int anos = stoi(ano);
+    bool st = stoi(status);
+
+    int index = Storage.size() - 1;
+    Storage.emplace_back();
+    Storage[index].set_modelo(modelo) ;
+    Storage[index].set_marca(marca);
+    Storage[index].set_color(color);
+    Storage[index].set_status(st);
+    Storage[index].set_puertas(npuertas);
+    Storage[index].set_ano(anos);
+    Storage[index].set_kilometraje(kmtraje);
+}
+
 
 void actualizarStock(vector <Auto> Storage)
 {
@@ -53,18 +71,5 @@ void actualizarStock(vector <Auto> Storage)
     cout << "Ingrese el kilometraje: " << endl;
     cin >> km;
     escribirStock(mc, mo, cl, st, pt, an, km);
+    anadirStock(Storage, mc, mo, cl, st, pt, an, km);
 }
-
-
-/*
-ofstream myfile("bucket_autos.csv");
-    if(myfile.is_open())
-    {
-        for(int i = 0; i < Storage.size; i++)
-        {
-            myfile << Storage[i].get_modelo() << "," << Storage[i].get_marca() << "," << Storage[i].get_color() << "," << Storage[i].get_status() << "," << Storage[i].get_puertas() << "," << Storage[i].get_ano() << "," << Storage[i].get_kilometraje()<< endl;
-        }
-        myfile.close();
-        cout << "\nStock actualizado con exito";
-    }
-*/
