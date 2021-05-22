@@ -1,4 +1,5 @@
 #pragma once
+
 #include <iostream>
 #include <string>
 #include "autos.h"
@@ -13,6 +14,7 @@ void Venta(vector <Auto> Storage)
     bool err = false;
     do
     {
+        err = false;
         cout << "Ingrese el modelo que se va a vender: " << endl;
         cin >> mod;
         int index = -1;
@@ -44,6 +46,7 @@ void Venta(vector <Auto> Storage)
     } while (err == true);
     char op;
     cout << "Desea registrar otra venta? S/N" << endl;
+    cin >> op;
     if(tolower(op) == 's')
     {
         Venta(Storage);
@@ -60,6 +63,7 @@ void Compra(vector <Auto> Storage)
     bool err = false;
     do
     {
+        err = false;
         cout << "Ingrese el modelo que se va a comprar: " << endl;
         cin >> mod;
         int index = -1;
@@ -81,7 +85,7 @@ void Compra(vector <Auto> Storage)
             if(Storage[index].get_status() == 1)
             {
                 cout << "Vehiculo validado, generando compra . . ." << endl;
-                cont_ventas++;
+                cont_compras++;
             }
             else 
             {
@@ -91,6 +95,7 @@ void Compra(vector <Auto> Storage)
     } while (err == true);
     char op;
     cout << "Desea registrar otra compra? S/N" << endl;
+    cin >> op;
     if(tolower(op) == 's')
     {
         Compra(Storage);
@@ -105,14 +110,14 @@ void Reporte(int ventas, int compras)
 {
     cout << "-----------------------------------------" << endl;
     cout << "Ventas exitosas: " << ventas << " ventas" << endl;
-    cout << "Compras exitosas; " << compras << " compras" << endl;
+    cout << "Compras exitosas: " << compras << " compras" << endl;
     cout << "-----------------------------------------" << endl;
 
     ofstream reg;
     reg.open("reporte.txt");
     reg << "-----------------------------------------" << endl;
     reg << "Ventas exitosas: " << ventas << " ventas" << endl;
-    reg << "Compras exitosas; " << compras << " compras" << endl;
+    reg << "Compras exitosas: " << compras << " compras" << endl;
     reg << "-----------------------------------------" << endl;
     reg.close();
 }

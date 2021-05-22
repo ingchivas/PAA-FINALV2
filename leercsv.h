@@ -39,10 +39,10 @@ void InvAutos()
         Storage[cit].set_status(st);
         Storage[cit].set_puertas(npuertas);
         Storage[cit].set_ano(anos);
-        Storage[cit].set_kilometraje(kmtraje);
+        Storage[cit].set_kmt(kmtraje);
         cit++;
-        }
-        csv.close();
     }
+    csv.close();
+}
     
     

@@ -5,6 +5,8 @@
 
 using namespace std;
 
+// Genera la clase Auto
+
 class Auto
 {
     private:
@@ -15,7 +17,7 @@ class Auto
         bool status;
         int puertas;
         int ano;
-        double kilometraje;
+        double kmt;
 
     public:
         Auto();
@@ -28,7 +30,7 @@ class Auto
         void set_status(bool);
         void set_puertas(int);
         void set_ano(int);
-        void set_kilometraje(double);
+        void set_kmt(double);
         //GETTERS
         string get_marca();
         string get_modelo();
@@ -37,7 +39,7 @@ class Auto
         bool get_status();
         int get_puertas();
         int get_ano();
-        double get_kilomtraje();
+        double get_kmt();
 };
 Auto::~Auto(){}
 Auto::Auto(){}
@@ -73,9 +75,9 @@ void Auto::set_ano(int an)
 {
     ano = an;
 }
-void Auto::set_kilometraje(double km)
+void Auto::set_kmt(double km)
 {
-    kilometraje = km;
+    kmt = km;
 }
 
 // -------------------------------------GETTERS-------------------------------
@@ -108,7 +110,7 @@ int Auto::get_ano()
 {
     return ano;
 }
-double Auto::get_kilometraje()
+double Auto::get_kmt()
 {
-    return kilometraje;
+    return kmt;
 }

@@ -4,6 +4,7 @@
 #include "leercsv.h"
 #include "inventario.h"
 #include "registros.h"
+#include "fichas.h"
 
 using namespace std;
 
@@ -13,7 +14,6 @@ int main()
     bool rep = true;
     InvAutos();
     
-    //funcion para leer stock
     do
     {
         cout << "\n\nBienvenido a las CARROZAS MAS PETES DEL MUNDO\n"
@@ -24,7 +24,8 @@ int main()
         << "\n[3] Registrar una venta"
         << "\n[4] Registrar una compra"
         << "\n[5] Generar un reporte de ventas"
-        << "\n[6] Salir del programa"
+        << "\n[6] Generar una ficha tecnica"
+        << "\n[7] Salir del programa"
         << "\nSu opcion: ";
 
         cin >> opc;
@@ -57,6 +58,11 @@ int main()
                 break;
 
             case 6:
+                cout << "\n\n . . . Generando una ficha tecnica . . .\n";
+                Ficha(Storage);
+                break;
+
+            case 7:
                 cout << "\n\n . . . Cerrando el programa . . .";
                 cout << "\nGracias por utilizar el programa de la concesionaria!";
                 rep = false;
