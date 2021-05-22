@@ -5,6 +5,7 @@
 #include "inventario.h"
 #include "registros.h"
 #include "fichas.h"
+#include "titulo.h"
 
 using namespace std;
 
@@ -13,11 +14,11 @@ int main()
     unsigned int opc;
     bool rep = true;
     InvAutos();
+    Titulo();
     
     do
     {
-        cout << "\n\nBienvenido a las CARROZAS MAS PETES DEL MUNDO\n"
-        << "\nPura chingoneria\n"
+        cout << "\n\nBienvenido a las CARROZAS \n"
         << "\n---Por favor, elija que desea hacer: ---\n"
         << "\n[1] Consultar stock"
         << "\n[2] Actualizar archivo CSV"
