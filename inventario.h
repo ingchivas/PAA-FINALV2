@@ -34,7 +34,7 @@ bool _escribirStock(string marca, string modelo, string color, string status, st
     return true;
 }
 
-void anadirStock(string marca, string modelo, string color, string status, string puertas, string ano, string kilometraje)
+void _anadirStock(string marca, string modelo, string color, string status, string puertas, string ano, string kilometraje)
 {
     double kmtraje = stod(kilometraje);
     int npuertas = stoi(puertas);
@@ -104,5 +104,5 @@ void actualizarStock(vector <Auto> Storage)
     }while(stoi(km) < 0);
     
     _escribirStock(mc, mo, cl, st, pt, an, km);
-    anadirStock(mc, mo, cl, st, pt, an, km);
+    _anadirStock(mc, mo, cl, st, pt, an, km);
 }
