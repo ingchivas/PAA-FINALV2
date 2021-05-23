@@ -18,7 +18,7 @@ int main()
     
     do
     {
-        cout << "\n\nBienvenido a las CARROZAS \n"
+        cout << "\n\nBienvenido a las CARROZAS SA. de CV.\n"
         << "\n---Por favor, elija que desea hacer: ---\n"
         << "\n[1] Consultar stock"
         << "\n[2] Actualizar archivo CSV"
