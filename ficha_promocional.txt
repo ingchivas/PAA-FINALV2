@@ -1,9 +1,0 @@
------------------------------------------------
-Modelo: Outlander
-Marca: Mitsubishi
-Color: Rojo
-Status: No disponible
-Puertas: 4
-Anio: 2016
-Kilometraje: 130000
------------------------------------------------
