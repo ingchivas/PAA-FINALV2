@@ -62,6 +62,21 @@ int main()
             case 6:
                 cout << "\n\n . . . Generando una ficha tecnica . . .\n";
                 Ficha(Storage);
+                char op;
+                do
+                    {
+                        cout << "Desea generar otra ficha? S/N" << endl;
+                    cin >> op;
+                    if(tolower(op) == 's')
+                    {
+                        Ficha(Storage);
+                        break;
+                    }
+                    else
+                    {
+                        cout << "Fichas generadas existosamente, regresando al programa principal" << endl;
+                    }
+                    }while(opc == 's');
                 break;
 
             case 7:

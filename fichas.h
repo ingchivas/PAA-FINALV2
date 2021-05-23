@@ -33,7 +33,8 @@ void Ficha(vector <Auto> Storage)
         else
         {
             ofstream ficha;
-            ficha.open("ficha_promocional.txt");
+            string filename = "ficha_promo_"+Storage[index].get_modelo()+".txt";
+            ficha.open(filename);
             ficha << "-----------------------------------------------" << endl;
             ficha << "Modelo: " << Storage[index].get_modelo() << endl;
             ficha << "Marca: " << Storage[index].get_marca()<< endl;
@@ -47,15 +48,5 @@ void Ficha(vector <Auto> Storage)
             cout << "Ficha generada con exito. " << endl;
         }
     } while (err == true);
-    char op;
-    cout << "Desea generar otra ficha? S/N" << endl;
-    cin >> op;
-    if(tolower(op) == 's')
-    {
-        Ficha(Storage);
-    }
-    else
-    {
-        cout << "Fichas generadas existosamente, regresando al programa principal" << endl;
-    }
+    
 }

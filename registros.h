@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <ctime>
 #include "autos.h"
 
 using namespace std;
@@ -106,6 +107,16 @@ void Compra(vector <Auto> Storage)
     }
 }
 
+string Tiempo()
+{
+    time_t tt;
+    struct tm * ti;
+    time (&tt);
+    ti = localtime(&tt);
+
+    return asctime(ti);
+}
+
 void Reporte(int ventas, int compras)
 {
     cout << "-----------------------------------------" << endl;
@@ -116,6 +127,7 @@ void Reporte(int ventas, int compras)
     ofstream reg;
     reg.open("reporte.txt");
     reg << "-----------------------------------------" << endl;
+    reg << "Hora de generación del reporte:" <<" " << Tiempo();
     reg << "Ventas exitosas: " << ventas << " ventas" << endl;
     reg << "Compras exitosas: " << compras << " compras" << endl;
     reg << "-----------------------------------------" << endl;
