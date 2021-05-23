@@ -25,7 +25,7 @@ void imprimirStock(vector<Auto> Storage)
     }
 }
 
-bool escribirStock(string marca, string modelo, string color, string status, string puertas, string ano, string kilometraje)
+bool _escribirStock(string marca, string modelo, string color, string status, string puertas, string ano, string kilometraje)
 {
     ofstream myfile;
     myfile.open("bucket_autos.csv", ios_base::app);
@@ -103,6 +103,6 @@ void actualizarStock(vector <Auto> Storage)
         }
     }while(stoi(km) < 0);
     
-    escribirStock(mc, mo, cl, st, pt, an, km);
+    _escribirStock(mc, mo, cl, st, pt, an, km);
     anadirStock(mc, mo, cl, st, pt, an, km);
 }
