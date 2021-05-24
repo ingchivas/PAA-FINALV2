@@ -117,6 +117,8 @@ string Tiempo()
     return asctime(ti);
 }
 
+int cont = 0;
+
 void Reporte(int ventas, int compras)
 {
     cout << "-----------------------------------------" << endl;
@@ -125,11 +127,15 @@ void Reporte(int ventas, int compras)
     cout << "-----------------------------------------" << endl;
 
     ofstream reg;
-    reg.open("reporte.txt");
+    
+    string scont = to_string(cont);
+    string filename = "reporte_" + scont + ".txt";
+    reg.open(filename);
     reg << "-----------------------------------------" << endl;
     reg << "Hora de generación del reporte:" <<" " << Tiempo();
     reg << "Ventas exitosas: " << ventas << " ventas" << endl;
     reg << "Compras exitosas: " << compras << " compras" << endl;
     reg << "-----------------------------------------" << endl;
+    cont++;
     reg.close();
 }

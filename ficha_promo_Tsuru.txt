@@ -1,0 +1,9 @@
+-----------------------------------------------
+Modelo: Tsuru
+Marca: Nissan
+Color: rosa
+Status: No disponible
+Puertas: 4
+Anio: 2002
+Kilometraje: 89899
+-----------------------------------------------
