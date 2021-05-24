@@ -132,7 +132,7 @@ void Reporte(int ventas, int compras)
     string filename = "reporte_" + scont + ".txt";
     reg.open(filename);
     reg << "-----------------------------------------" << endl;
-    reg << "Hora de generación del reporte:" <<" " << Tiempo();
+    reg << "Fecha y hora de generación del reporte:" <<" " << Tiempo();
     reg << "Ventas exitosas: " << ventas << " ventas" << endl;
     reg << "Compras exitosas: " << compras << " compras" << endl;
     reg << "-----------------------------------------" << endl;
