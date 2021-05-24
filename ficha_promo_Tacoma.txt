@@ -1,9 +1,0 @@
------------------------------------------------
-Modelo: Tacoma
-Marca: Toyota
-Color: verde
-Status: No disponible
-Puertas: 2
-Anio: 2021
-Kilometraje: 0
------------------------------------------------
