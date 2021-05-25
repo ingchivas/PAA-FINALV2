@@ -17,7 +17,7 @@ void imprimirStock(vector<Auto> Storage)
         cout << "Modelo: " << Storage[i].get_modelo() << endl;
         cout << "Marca: " << Storage[i].get_marca()<< endl;
         cout << "Color: " << Storage[i].get_color()<< endl;
-        (Storage[i].get_status() == '0')? cout << "Status: Disponible"<< endl : cout << "Status: No disponible"<< endl;
+        (Storage[i].get_status() == '1')? cout << "Status: Disponible"<< endl : cout << "Status: No disponible"<< endl;
         cout << "Puertas: " << Storage[i].get_puertas()<< endl;
         cout << "Anio: " << Storage[i].get_ano()<< endl;
         cout << "Kilometraje: " << Storage[i].get_kmt() << endl;

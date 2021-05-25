@@ -39,7 +39,7 @@ void Ficha(vector <Auto> Storage)
             ficha << "Modelo: " << Storage[index].get_modelo() << endl;
             ficha << "Marca: " << Storage[index].get_marca()<< endl;
             ficha << "Color: " << Storage[index].get_color()<< endl;
-            (Storage[index].get_status() == '0')? ficha << "Status: Disponible"<< endl : ficha << "Status: No disponible"<< endl;
+            (Storage[index].get_status() == '1')? ficha << "Status: Disponible"<< endl : ficha << "Status: No disponible"<< endl;
             ficha << "Puertas: " << Storage[index].get_puertas()<< endl;
             ficha << "Anio: " << Storage[index].get_ano()<< endl;
             ficha << "Kilometraje: " << Storage[index].get_kmt() << endl;
