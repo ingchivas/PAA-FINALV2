@@ -13,6 +13,6 @@ FT
  ┃ ┣ inventario.h
  ┃ ┣ leercsv.h
  ┃ ┣ main.cpp
- ┃ ┣ main.exe
+ ┃ ┣ main.exe #Ejecutable
  ┃ ┣ registros.h
  ┃ ┗ titulo.h
